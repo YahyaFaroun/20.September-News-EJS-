@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <section>
+            <%newsData.forEach(elt=>{%>
+                <article>
+                    <h1><%=elt.title%>"></h1>
+                    <h5><%=elt.publishedAt%>"></h5>
+                    <img src="<%=elt.urlToImage%>">" alt="">
+                    <p><%=elt.description%>"></p>
+                    <div>
+                        <h4><%=elt.author%>"></h4>
+                        <a href="<%=elt.url%>">">Click4More</a>
+                    </div>
+                </article>
+                <%})%>
+        </section>
+    </main>
+</body>
+</html>
