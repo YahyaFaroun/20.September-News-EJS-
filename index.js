@@ -10,10 +10,13 @@ const newsData = require('./newsData.json')
 
 
 //Server abhören
-app.listen(3008, () => {
-    console.log('listening at 3008');
+// app.listen(3008, () => {
+//     console.log('listening at 3008');
+// })
+const PORT = process.env.PORT || 3008
+app.listen(PORT, () => {
+    console.log('Listening at 3008');
 })
-
 
 //Um Public Ordner zu verwenden
 app.use(express.static('public'))
