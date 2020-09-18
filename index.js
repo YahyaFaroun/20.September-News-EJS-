@@ -10,8 +10,8 @@ const newsData = require('./newsData.json')
 
 
 //Server abhören
-app.listen(3008, () =>{
-    console.log('listening at 3008');   
+app.listen(3008, () => {
+    console.log('listening at 3008');
 })
 
 
@@ -20,11 +20,11 @@ app.use(express.static('public'))
 
 
 //Routing
-app.get('/', (req, res) =>{
-    res.render('index', {newsData: newsData})
+app.get('/', (req, res) => {
+    res.render('index', { newsData: newsData })
 })
 
 //404
-app.use((req, res) =>{
-    res.render('404')
-})
+// app.use((req, res) => {
+//     res.render('404')
+// })
